@@ -1,0 +1,11 @@
+<p>Now is <%= Time.now %></p>
+
+<h2>Find lots of restaurants</h2>
+<ol>
+  <% @restaurants.each do |restaurant| %>
+  <li><%= restaurant[:name] %> (<%= restaurant[:address] %>)</li>
+<% end %>
+</ol>
+<p><%= link_to "Know more about us", about_path %></p>
+<p><%= link_to "Discover all our restaurants", restaurants_path %></p>
+<p><%= link_to "Say hi", welcome_path %></p>
