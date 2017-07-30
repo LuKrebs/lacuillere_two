@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'restaurants', to: 'restaurants#index'
 
   get 'contact', to: 'pages#contact'
 
@@ -7,10 +6,10 @@ Rails.application.routes.draw do
 
   get 'about', to: 'pages#about'
 
+  get 'create', to: 'restaurants#create'
+
   root to: 'pages#home'
 
-  get 'restaurants/:id', to: 'restaurants#show'
-
-  post '/restaurants', to: 'restaurants#create'
+  resources :restaurants
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
